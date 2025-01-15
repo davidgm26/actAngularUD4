@@ -1,0 +1,37 @@
+<h1 class="titulo">Lista de Películas</h1>
+
+<select name="" id="" [(ngModel)]="idGeneroSeleccionado">
+    <option *ngFor="let genero of generos" [value]="genero.id">{{genero.nombre}}</option>
+</select>
+
+<div class="acciones">
+    <button class="boton-accion" (click)="buscar()">Buscar</button>
+    <button class="boton-accion" (click)="topTresValoraciones()">Top 3</button>
+    <button class="boton-accion" (click)="limpiar()">Limpiar</button>
+    <button class="boton-accion" (click)="calcularMedia()">Calcular Media</button>
+  </div>
+  
+    <div class="media" *ngIf="mostrar">
+        <p>Media de las calificaciones: {{ media }}</p>
+    </div>
+
+<table class="tabla-peliculas">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Año</th>
+      <th>Director</th>
+      <th>Calificación</th>
+      <th>Género</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of listaPeliculasMostradas">
+      <td>{{ pelicula.titulo }}</td>
+      <td>{{ pelicula.anio }}</td>
+      <td>{{ pelicula.director }}</td>
+      <td><input type="number" step="0.1" max="10" min="0" [(ngModel)]="pelicula.calificacion" value="{{ pelicula.calificacion }}" class="inputs"></td>
+      <td>{{ pelicula.genero.nombre }}</td>
+    </tr>
+  </tbody>
+</table>

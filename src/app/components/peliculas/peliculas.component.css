@@ -1,0 +1,67 @@
+.titulo {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tabla-peliculas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+  
+  .tabla-peliculas th, .tabla-peliculas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .tabla-peliculas th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .tabla-peliculas tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabla-peliculas tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .tabla-peliculas td {
+    font-size: 14px;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .boton-accion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-accion:hover {
+    background-color: #0056b3;
+  }
+
+  .inputs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    width: 25%;
+  }
+
+  
