@@ -1,4 +1,30 @@
 <h1 class="titulo">Lista de Películas</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">🎥 Cartelera Cine Meridiano</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="irAPeliculas()">🎥 Películas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irARestaurante()">🍴 Restaurante</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <select name="" id="" [(ngModel)]="idGeneroSeleccionado">
     <option *ngFor="let genero of generos" [value]="genero.id">{{genero.nombre}}</option>

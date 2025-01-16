@@ -5,10 +5,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar li{
-  list-style: none;
-}
-
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,7 +18,9 @@
   padding: 0.5rem 1rem;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
-
+.navbar li{
+  list-style: none;
+}
 .navbar-nav .nav-link:hover {
   color: #fff !important;
   background-color: #d9534f;
@@ -50,72 +48,62 @@
   }
 }
 
-
-
-.titulo {
-    text-align: center;
+.container {
+    margin: 0 auto;
+    max-width: 800px;
     font-family: Arial, sans-serif;
-    color: #333;
-    margin-bottom: 20px;
   }
   
-  .tabla-peliculas {
+  .titulo-principal {
+    text-align: center;
+    color: #d9534f;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .seccion {
+    margin-bottom: 2rem;
+  }
+  
+  .titulo-seccion {
+    color: #5bc0de;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .tabla {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #444;
+    text-align: left;
+    font-size: 0.9rem;
   }
   
-  .tabla-peliculas th, .tabla-peliculas td {
+  .tabla th, .tabla td {
     border: 1px solid #ddd;
     padding: 8px;
+  }
+  
+  .tabla th {
+    background-color: #f7f7f7;
+    font-weight: bold;
     text-align: center;
   }
   
-  .tabla-peliculas th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  .tabla-peliculas tr:nth-child(even) {
+  .tabla tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
   
-  .tabla-peliculas tr:hover {
+  .tabla tbody tr:hover {
     background-color: #f1f1f1;
   }
   
-  .tabla-peliculas td {
-    font-size: 14px;
+  .tabla-platos th {
+    color: #5cb85c;
   }
   
-  .acciones {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
+  .tabla-pedidos th {
+    color: #337ab7;
   }
-  
-  .boton-accion {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton-accion:hover {
-    background-color: #0056b3;
-  }
-
-  .inputs {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    width: 25%;
-  }
-
   

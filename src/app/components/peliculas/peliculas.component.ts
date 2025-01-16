@@ -3,6 +3,7 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Pelicula } from 'src/app/interfaces/pelicula';
 import { Genero } from 'src/app/interfaces/genero';
 import { FormsModule, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-peliculas',
@@ -12,6 +13,12 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent implements OnInit{
+
+constructor(
+    private router: Router,
+
+) { 
+}
 
   generos: Genero[] = [
     { id: 1, nombre: "Terror" },
@@ -219,6 +226,14 @@ export class PeliculasComponent implements OnInit{
   calcularMedia(){
     this.mostrar = true;
     this.media  = Math.round(this.listaPeliculas.reduce((a,b) => a + b.calificacion, 0) / this.listaPeliculas.length * 10) / 10;
+  }
+  
+  irAPeliculas(){
+    this.router.navigate(['/peliculas']);
+  }
+
+  irARestaurante(){
+    this.router.navigate(['/restaurante']);
   }
 
 

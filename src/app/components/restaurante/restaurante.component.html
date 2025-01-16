@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">🍝 La Bella Italia</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="irAPeliculas()">🎥 Películas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="irARestaurante()">🍴 Restaurante</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+    <h1 class="titulo-principal">Ristorante La Bella Italia</h1>
+    
+    <h2>Total Ganancias: {{calcularTotalGanancias()}} €</h2>
+    <div class="seccion">
+      <h3 class="titulo-seccion">Lista de platos</h3>
+
+      <input type="text" [(ngModel)]="cliente" placeholder="Nombre del cliente" class="input-nombre-plato">
+      <button (click)="buscarPorCliente(cliente)">Buscar</button>
+      <input type="number" [(ngModel)]="precio" placeholder="Total del pedido" class="input-nombre-plato">
+      <button (click)="buscarPorPrecio(precio)">Buscar</button>
+
+      <table class="tabla tabla-platos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let plato of platos">
+            <td>{{ plato.id }}</td>
+            <td>{{ plato.nombre }}</td>
+            <td>{{ plato.precio}} €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="seccion">
+      <h3 class="titulo-seccion">Lista de pedidos</h3>
+      <table class="tabla tabla-pedidos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Total a pagar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedidos">
+            <td>{{ pedido.id }}</td>
+            <td>{{ pedido.cliente }}</td>
+            <td>{{ calcularTotalPedido(pedido)}} €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
